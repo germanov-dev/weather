@@ -30,7 +30,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-yarn-
       - run: yarn install
-      - run: yarn build
+      - run: CI= yarn build
       - run: yarn export
 
       - name: Deploy
