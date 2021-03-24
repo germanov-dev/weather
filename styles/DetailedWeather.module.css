@@ -1,0 +1,252 @@
+.DetailedWeather {
+	text-align: center;
+}
+
+.DetailedWeather > div {
+	background: rgba(0, 0, 0, 0.5);
+	padding: 1.5rem;
+	border-radius: 2.5rem 2.5rem 0 0;
+	position: relative;
+}
+
+.Date,
+.Location {
+	font-size: 3rem;
+}
+
+@media (max-width: 767px) {
+	.Date,
+	.Location {
+		font-size: 2.5rem;
+	}
+}
+
+.Temp {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 2rem;
+}
+
+.Temp strong,
+.Temp span {
+	margin: 0 0.5rem;
+}
+
+.Row {
+	display: flex;
+	justify-content: center;
+}
+
+.Summary {
+	font-size: 2.3rem;
+}
+
+.DetailedList {
+	font-size: 2rem;
+	background: rgba(0, 0, 0, 0.3);
+	padding: 1.5rem;
+	border-radius: 0 0 2.5rem 2.5rem;
+}
+
+@media (max-width: 767px) {
+	.DetailedList {
+		font-size: 1.3rem;
+	}
+}
+
+.DetailedList li {
+	display: flex;
+	justify-content: space-between;
+	margin: 0 -2rem;
+}
+
+.DetailedList li + li {
+	margin-top: 1rem;
+}
+
+.DetailedList li > div {
+	display: flex;
+	justify-content: space-between;
+	width: 50%;
+	position: relative;
+	padding: 0 2rem;
+}
+
+.DetailedList li > div:first-child:after {
+	content: '';
+	width: 0.1rem;
+	height: 3.6rem;
+	background: #fff;
+	position: absolute;
+	top: 50%;
+	right: 0;
+	transform: translateY(-50%);
+}
+
+.DetailedList div > span {
+	display: inline-block;
+	margin-right: 1rem;
+	text-transform: uppercase;
+	font-weight: 200;
+	width: auto;
+	text-align-last: left;
+}
+
+.DetailedList div strong {
+	text-align: right;
+}
+
+.PrecepationType {
+	text-transform: uppercase;
+}
+
+.HoursHolder {
+	background: rgba(0, 0, 0, 0.5);
+	overflow: hidden;
+	border-radius: 2.5rem !important;
+	margin-top: 2rem;
+	padding: 2rem;
+}
+
+.HoursHolder h3 {
+	text-align: center;
+	margin-bottom: 2rem;
+	font-size: 3rem;
+}
+
+.Chart {
+	width: 100%;
+	height: 20rem;
+	position: relative;
+	/* border: 1px solid #fff; */
+	border-radius: 1.5rem;
+	cursor: none;
+	margin-bottom: 2.5rem;
+}
+
+.Hours {
+	display: flex;
+	position: absolute;
+	bottom: 0;
+	left: 2.5rem;
+	right: 0;
+	padding: 2.5rem 1.5rem 0 1rem;
+	padding-left: 0;
+	/* border-top: 1px solid #fff; */
+	height: 2.5rem;
+}
+
+.Hours > div + div {
+	margin-left: 12%;
+}
+
+.Temperatures {
+	position: absolute;
+	top: 0;
+	left: 0;
+	/* border-right: 1px solid #fff; */
+	height: 100%;
+	width: 2.5rem;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.ChartBody {
+	position: absolute;
+	top: 0;
+	left: 2.5rem;
+	right: 0;
+	bottom: 0;
+	height: 20rem;
+}
+
+.ChartDot {
+	width: 3rem;
+	height: 3rem;
+	/* border-radius: 50%; */
+	/* background: #fff; */
+	position: absolute;
+	/* color: #000; */
+	font-weight: 700;
+	font-size: 2rem;
+}
+
+.DotHolder {
+	position: absolute;
+	width: 4.16%;
+	bottom: 0;
+	top: 0;
+}
+
+/* .First {
+	position: absolute;
+	top: -35px;
+	left: 2px;
+	width: 25px;
+}
+
+.Last {
+	position: absolute;
+	bottom: 10px;
+	left: 0;
+	width: 25px;
+} */
+
+.Selector {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0.5rem;
+	height: 100%;
+	background: rgba(255, 255, 255, 0.7);
+	border-radius: 1rem;
+}
+
+.HourlyDetails {
+	/* display: flex; */
+	/* flex-wrap: wrap; */
+}
+
+.HourlyDetails li {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin: 0 -2rem;
+}
+
+.HourlyDetails li > div {
+	width: 50%;
+	padding: 0 2rem;
+	display: flex;
+	justify-content: space-between;
+}
+
+.HourlyDetails span {
+	text-transform: uppercase;
+	font-weight: 300;
+}
+
+.HourlyDetails strong span {
+	font-weight: 700;
+	display: inline-block;
+	margin-right: 5px;
+}
+
+.Back {
+	background: none;
+	border: none;
+	outline: none;
+	font-size: 0;
+	line-height: 0;
+	text-indent: -9999px;
+	background-image: url(/back.svg);
+	width: 3rem;
+	height: 3rem;
+	position: absolute;
+	top: 2rem;
+	left: 2rem;
+	cursor: pointer;
+}

@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;400;700&display=swap');
+
+*,
+*:before,
+*:after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+html {
+	font-size: 10px;
+}
+
+@media (max-width: 767px) {
+	html {
+		font-size: 9px;
+	}
+}
+
+body {
+	font-family: 'Dosis';
+	background-color: #0093e9;
+	background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+	color: #fff;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+	min-height: 100vh;
+	height: auto;
+	position: relative;
+	font-size: 1.5rem;
+}
+
+main {
+	margin: 0 auto 0;
+}

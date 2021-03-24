@@ -1,0 +1,9 @@
+.Layout {
+    min-height: 100vh;
+    padding-top: 11rem;
+	padding-bottom: 9rem;
+    padding: 11rem 2rem 9rem;
+    background-color: #B2FEFA;
+    background: linear-gradient(to top, #0ED2F7, #B2FEFA);
+    transition: all .5s;
+}

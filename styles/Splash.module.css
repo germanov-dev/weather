@@ -1,0 +1,13 @@
+.Splash {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #B2FEFA;
+    background: linear-gradient(to top, #0ED2F7, #B2FEFA);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,237 @@
+.Search {
+	display: flex;
+	align-items: center;
+}
+
+.Search input {
+	background: none;
+	border: none;
+	outline: none;
+	text-align: right;
+	padding-right: 0.5rem;
+	color: #fff;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+	text-transform: uppercase;
+	font-size: 1.8rem;
+}
+
+.Search input::placeholder {
+	color: #fff;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+	text-transform: uppercase;
+}
+
+.Search button {
+	background: none;
+	border: none;
+	outline: none;
+	margin-left: 1rem;
+	display: inline-block;
+	width: 5rem;
+	height: 5rem;
+	cursor: pointer;
+	transition: opacity 0.4s;
+}
+
+.Search button:hover {
+	opacity: 0.8;
+}
+
+.Switcher {
+	position: relative;
+	width: 10rem;
+	height: 5rem;
+	border-radius: 1.5rem;
+	margin-left: 1rem;
+}
+.Switcher input {
+	appearance: none;
+	position: relative;
+	width: 10rem;
+	height: 5rem;
+	border-radius: 1.5rem;
+	background-color: rgba(0, 0, 0, 0.3);
+	outline: none;
+	font-family: 'Oswald', sans-serif;
+}
+.Switcher input:before,
+.Switcher input:after {
+	z-index: 2;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	color: #fff;
+}
+.Switcher input:before {
+	content: 'F°';
+	left: 2rem;
+}
+.Switcher input:after {
+	content: 'C°';
+	right: 2rem;
+}
+.Switcher label {
+	z-index: 1;
+	position: absolute;
+	top: 1rem;
+	bottom: 1rem;
+	border-radius: 1rem;
+}
+.Switcher input {
+	transition: 0.25s -0.1s;
+	cursor: pointer;
+}
+.Switcher input:checked {
+	background-color: rgba(0, 0, 0, 0.3);
+}
+.Switcher input:checked:before {
+	color: #000;
+	transition: color 0.5s 0.2s;
+}
+.Switcher input:checked:after {
+	color: #fff;
+	transition: color 0.5s;
+}
+.Switcher input:checked + label {
+	left: 1rem;
+	right: 5rem;
+	background: #fff;
+	transition: left 0.5s, right 0.4s 0.2s;
+}
+.Switcher input:not(:checked) {
+	background: rgba(0, 0, 0, 0.3);
+	transition: background 0.5s -0.1s;
+}
+.Switcher input:not(:checked):before {
+	color: #fff;
+	transition: color 0.5s;
+}
+.Switcher input:not(:checked):after {
+	color: #000;
+	transition: color 0.5s 0.2s;
+}
+.Switcher input:not(:checked) + label {
+	left: 5rem;
+	right: 1rem;
+	background: #fff;
+	transition: left 0.4s 0.2s, right 0.5s, background 0.35s -0.1s;
+}
+
+@keyframes turn-on {
+	0% {
+		left: 100%;
+	}
+	100% {
+		left: 0%;
+	}
+}
+.Switcher.Switcher-2 input:not(:checked) {
+	background: rgba(0, 0, 0, 0.3);
+}
+.Switcher.Switcher-2 input:not(:checked) + label {
+	background: rgba(0, 0, 0, 0.3);
+	animation: turn-off 0.5s ease-out;
+}
+@keyframes turn-off {
+	0% {
+		right: 100%;
+	}
+	100% {
+		right: 0%;
+	}
+}
+.Switcher.Switcher-2 label {
+	top: 0px;
+	width: 10rem;
+	height: 5rem;
+	border-radius: 1.5rem;
+}
+
+@media (max-width: 767px) {
+	.Search button {
+		width: 3rem;
+		height: 3rem;
+	}
+
+	.Switcher {
+		position: relative;
+		width: 5rem;
+		height: 2.5rem;
+		border-radius: 0.75rem;
+		margin-left: 0.5rem;
+	}
+	.Switcher input {
+		appearance: none;
+		position: relative;
+		width: 5rem;
+		height: 2.5rem;
+		border-radius: 0.75rem;
+		background-color: rgba(0, 0, 0, 0.3);
+		outline: none;
+		font-family: 'Oswald', sans-serif;
+	}
+	.Switcher input:before,
+	.Switcher input:after {
+		z-index: 2;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		color: #fff;
+	}
+	.Switcher input:before {
+		content: 'F°';
+		left: 1rem;
+		font-size: 1rem;
+	}
+	.Switcher input:after {
+		content: 'C°';
+		right: 1rem;
+		font-size: 1rem;
+	}
+	.Switcher label {
+		z-index: 1;
+		position: absolute;
+		top: 0.5rem;
+		bottom: 0.5rem;
+		border-radius: 0.5rem;
+	}
+	.Switcher input {
+		transition: 0.25s -0.1s;
+		cursor: pointer;
+	}
+	.Switcher input:checked {
+		background-color: rgba(0, 0, 0, 0.3);
+	}
+	.Switcher input:checked:before {
+		color: #000;
+		transition: color 0.5s 0.2s;
+	}
+	.Switcher input:checked:after {
+		color: #fff;
+		transition: color 0.5s;
+	}
+	.Switcher input:checked + label {
+		left: 0.5rem;
+		right: 2.5rem;
+		background: #fff;
+		transition: left 0.5s, right 0.4s 0.2s;
+	}
+	.Switcher input:not(:checked) {
+		background: rgba(0, 0, 0, 0.3);
+		transition: background 0.5s -0.1s;
+	}
+	.Switcher input:not(:checked):before {
+		color: #fff;
+		transition: color 0.5s;
+	}
+	.Switcher input:not(:checked):after {
+		color: #000;
+		transition: color 0.5s 0.2s;
+	}
+	.Switcher input:not(:checked) + label {
+		left: 2.5rem;
+		right: 0.5rem;
+		background: #fff;
+		transition: left 0.4s 0.2s, right 0.5s, background 0.35s -0.1s;
+	}
+}

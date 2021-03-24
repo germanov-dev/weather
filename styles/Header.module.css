@@ -1,0 +1,27 @@
+.Header {
+	background: rgba(0, 0, 0, 0.5);
+	position: absolute;
+	top: 2rem;
+	left: 50%;
+	transform: translateX(-50%);
+	width: calc(100% - 4rem);
+	padding: 1rem;
+	border-radius: 2rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 99;
+	max-width: 1024px;
+}
+
+.Logo {
+	display: inline-block;
+	font-size: 0;
+	line-height: 0;
+	text-indent: -9999px;
+	background-image: url(/logo.png);
+	width: 5rem;
+	height: 5rem;
+	background-size: cover;
+	background-position: center center;
+}

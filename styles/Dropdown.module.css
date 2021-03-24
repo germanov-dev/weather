@@ -1,0 +1,11 @@
+.Dropdown {
+	position: absolute;
+	top: 100%;
+	right: 0;
+	width: 100%;
+	text-align: center;
+	background: rgba(0, 0, 0, 0.9);
+	padding: 1.5rem;
+	border-radius: 2.5rem;
+	min-height: 15rem;
+}

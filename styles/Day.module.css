@@ -1,0 +1,52 @@
+.Day {
+	color: #fff;
+	text-decoration: none;
+	display: block;
+	transition: background-color 0.4s;
+}
+
+.Day:hover {
+	background-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.DayHolder {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 5px 20px;
+}
+
+.DayOfWeek {
+	width: 11rem;
+	font-size: 2.5rem;
+}
+
+.Icon {
+	width: 5rem;
+	height: 5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: auto;
+}
+
+.TemperatureHigh {
+	font-size: 2rem;
+	width: 5rem;
+	height: 5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: auto;
+}
+
+.TemperatureLow {
+	font-size: 2rem;
+	opacity: 0.9;
+	height: 2rem;
+	width: 5rem;
+	height: 5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
