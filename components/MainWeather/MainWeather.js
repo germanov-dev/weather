@@ -16,6 +16,8 @@ const MainWeather = (props) => {
 		windDirection,
 	} = useContext(AppContext);
 
+	console.log(props.location);
+
 	const mainWeather = !loading ? (
 		<div className={styles.Current}>
 			<div>

@@ -17,7 +17,10 @@ const AppWrapper = ({ children }) => {
 	const [location, setLocation] = useState();
 	const [weather, setWeather] = useState([]);
 	const [classBackground, setClassBackground] = useState();
-	const [backgroundStyle, setBackgroundStyle] = useState({ color: '#B2FEFA', gradient: 'linear-gradient(to top, #0ED2F7, #B2FEFA)' });
+	const [backgroundStyle, setBackgroundStyle] = useState({
+		color: '#B2FEFA',
+		gradient: 'linear-gradient(to top, #0ED2F7, #B2FEFA)',
+	});
 
 	useEffect(() => {
 		if (!query == '') {

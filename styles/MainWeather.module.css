@@ -60,13 +60,13 @@
 	font-size: 3.5rem;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 500px) {
 	.Current > div,
 	.Current ul {
 		width: 100%;
 	}
 
 	.Current > div {
-		margin-bottom: 30px;
+		margin-bottom: 3rem;
 	}
 }
