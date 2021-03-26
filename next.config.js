@@ -5,5 +5,4 @@ module.exports = {
 	},
 	basePath: '/weather',
 	assetPrefix: '/weather/',
-	env,
 };
