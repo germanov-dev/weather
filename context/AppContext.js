@@ -55,7 +55,10 @@ const AppWrapper = ({ children }) => {
 
 	const reverseGeocoding = async () => {
 		const reverseAPI = `https://api.opencagedata.com/geocode/v1/json?q=${lat}+${long}&key=d6d274c390434a5da83e82945466c21a`;
-		const response = await fetch(reverseAPI);
+		const response = await fetch(reverseAPI, {
+			mode: 'cors',
+			credentials: 'include',
+		});
 
 		if (response.ok) {
 			const data = await response.json();
@@ -88,7 +91,10 @@ const AppWrapper = ({ children }) => {
 
 	const forwardGeocoding = async () => {
 		const forwardAPI = `https://api.opencagedata.com/geocode/v1/json?q=${query}&key=d6d274c390434a5da83e82945466c21a`;
-		const response = await fetch(forwardAPI);
+		const response = await fetch(forwardAPI, {
+			mode: 'cors',
+			credentials: 'include',
+		});
 
 		if (response.ok) {
 			const data = await response.json();

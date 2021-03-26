@@ -39,7 +39,8 @@ const DetailedWeather = () => {
 
 	const getDetailedWeather = async () => {
 		const res = await fetch(
-			`https://api.darksky.net/forecast/d090ad71e840a71b480a0e2443977dab/${lat},${long},${day}?units=${units}`
+			`https://api.darksky.net/forecast/d090ad71e840a71b480a0e2443977dab/${lat},${long},${day}?units=${units}`,
+			{ mode: 'cors', credentials: 'include' }
 		);
 
 		if (res.ok) {
@@ -151,7 +152,9 @@ const DetailedWeather = () => {
 	};
 
 	const mouseMoveSelector = (event) => {
-		chartSelector.current.style.left = `${event.pageX - chartBlock.current.getBoundingClientRect().left}px`;
+		chartSelector.current.style.left = `${
+			event.pageX - chartBlock.current.getBoundingClientRect().left
+		}px`;
 	};
 
 	const dotMouseOverHandler = (index) => {
@@ -346,7 +349,10 @@ const DetailedWeather = () => {
 							</div>
 						</div>
 
-						<div className={styles.ChartBody} onMouseMove={mouseMoveSelector} ref={chartBlock}>
+						<div
+							className={styles.ChartBody}
+							onMouseMove={mouseMoveSelector}
+							ref={chartBlock}>
 							<div ref={chartSelector} className={styles.Selector}></div>
 
 							{weather.hourly.data.map((hour, index) => {
