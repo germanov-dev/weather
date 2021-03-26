@@ -59,7 +59,6 @@ const AppWrapper = ({ children }) => {
 			credentials: false,
 			headers: {
 				'Content-Type': 'application/json',
-				'Access-Control-Allow-Origin': '*',
 			},
 		});
 
@@ -98,7 +97,6 @@ const AppWrapper = ({ children }) => {
 			credentials: false,
 			headers: {
 				'Content-Type': 'application/json',
-				'Access-Control-Allow-Origin': '*',
 			},
 		});
 
