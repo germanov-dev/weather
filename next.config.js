@@ -5,4 +5,5 @@ module.exports = {
 	},
 	basePath: '/weather',
 	assetPrefix: '/weather/',
+	imagesPublicPath: '/weather/_next/static/images/',
 };
