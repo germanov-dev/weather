@@ -56,9 +56,8 @@ const AppWrapper = ({ children }) => {
 	const reverseGeocoding = async () => {
 		const reverseAPI = `https://api.opencagedata.com/geocode/v1/json?q=${lat}+${long}&key=d6d274c390434a5da83e82945466c21a`;
 		const response = await fetch(reverseAPI, {
-			headers: {
-				'Access-Control-Allow-Origin': 'https://germanov.js.org/weather',
-			},
+			mode: 'cors',
+			credentials: false,
 		});
 
 		if (response.ok) {
@@ -93,9 +92,8 @@ const AppWrapper = ({ children }) => {
 	const forwardGeocoding = async () => {
 		const forwardAPI = `https://api.opencagedata.com/geocode/v1/json?q=${query}&key=d6d274c390434a5da83e82945466c21a`;
 		const response = await fetch(forwardAPI, {
-			headers: {
-				'Access-Control-Allow-Origin': 'https://germanov.js.org/weather',
-			},
+			mode: 'cors',
+			credentials: false,
 		});
 
 		if (response.ok) {
