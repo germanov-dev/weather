@@ -5,4 +5,8 @@ module.exports = {
 	assetPrefix: isProd
 		? 'https://cdn.statically.io/gh/germanov-dev/germanov-dev.github.io/weather/'
 		: '',
+	images: {
+		loader: 'imgix',
+		path: 'https://germanov-dev.github.io/weather/',
+	},
 };
