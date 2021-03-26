@@ -57,6 +57,10 @@ const AppWrapper = ({ children }) => {
 		const reverseAPI = `https://api.opencagedata.com/geocode/v1/json?q=${lat}+${long}&key=d6d274c390434a5da83e82945466c21a`;
 		const response = await fetch(reverseAPI, {
 			credentials: false,
+			headers: {
+				'Content-Type': 'application/json',
+				'Access-Control-Allow-Origin': '*',
+			},
 		});
 
 		if (response.ok) {
@@ -92,6 +96,10 @@ const AppWrapper = ({ children }) => {
 		const forwardAPI = `https://api.opencagedata.com/geocode/v1/json?q=${query}&key=d6d274c390434a5da83e82945466c21a`;
 		const response = await fetch(forwardAPI, {
 			credentials: false,
+			headers: {
+				'Content-Type': 'application/json',
+				'Access-Control-Allow-Origin': '*',
+			},
 		});
 
 		if (response.ok) {
