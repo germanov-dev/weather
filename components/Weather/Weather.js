@@ -16,6 +16,7 @@ const Weather = () => {
 		setLocation,
 		reverseGeocoding,
 		setClassBackground,
+		proxy,
 	} = useContext(AppContext);
 
 	useEffect(() => {
@@ -24,7 +25,7 @@ const Weather = () => {
 	}, [lat, long, units]);
 
 	const getLocationData = async () => {
-		const weatherAPI = `https://api.darksky.net/forecast/d090ad71e840a71b480a0e2443977dab/${lat},${long}?units=${units}`;
+		const weatherAPI = `${proxy}https://api.darksky.net/forecast/d090ad71e840a71b480a0e2443977dab/${lat},${long}?units=${units}`;
 		const response = await fetch(weatherAPI);
 
 		if (response.ok) {

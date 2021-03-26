@@ -8,6 +8,7 @@ const AppWrapper = ({ children }) => {
 	const [lat, setLat] = useState(42.698334);
 	const [search, setSearch] = useState('');
 	const [query, setQuery] = useState('');
+	const [proxy, setProxy] = useState('https://cors-anywhere.herokuapp.com/');
 	const [dropdownItems, setDropdownItems] = useState([]);
 	const [dropdownLoading, setDropdownLoading] = useState(false);
 	const [units, setUnits] = useState('si');
@@ -54,7 +55,7 @@ const AppWrapper = ({ children }) => {
 	};
 
 	const reverseGeocoding = async () => {
-		const reverseAPI = `https://api.opencagedata.com/geocode/v1/json?q=${lat}+${long}&key=d6d274c390434a5da83e82945466c21a`;
+		const reverseAPI = `${proxy}https://api.opencagedata.com/geocode/v1/json?q=${lat}+${long}&key=d6d274c390434a5da83e82945466c21a`;
 		const response = await fetch(reverseAPI);
 
 		if (response.ok) {
@@ -87,7 +88,7 @@ const AppWrapper = ({ children }) => {
 	};
 
 	const forwardGeocoding = async () => {
-		const forwardAPI = `https://api.opencagedata.com/geocode/v1/json?q=${query}&key=d6d274c390434a5da83e82945466c21a`;
+		const forwardAPI = `${proxy}https://api.opencagedata.com/geocode/v1/json?q=${query}&key=d6d274c390434a5da83e82945466c21a`;
 		const response = await fetch(forwardAPI);
 
 		if (response.ok) {
@@ -236,6 +237,7 @@ const AppWrapper = ({ children }) => {
 				setClassBackground,
 				backgroundStyle,
 				setBackgroundStyle,
+				proxy,
 			}}>
 			{children}
 		</AppContext.Provider>
