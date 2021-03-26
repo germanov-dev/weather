@@ -12,7 +12,7 @@ module.exports = withPlugins([
 				strip: true,
 				verbose: true,
 			},
-			imagesPublicPath: '/wallisconsultancy/_next/static/images/',
+			imagesPublicPath: '/weather/_next/static/images/',
 		},
 	],
 	{
@@ -20,8 +20,8 @@ module.exports = withPlugins([
 			loader: 'imgix',
 			path: 'https://germanov.js.org/weather/',
 		},
-		basePath: '/wallisconsultancy',
-		assetPrefix: '/wallisconsultancy/',
+		basePath: '/weather',
+		assetPrefix: '/weather/',
 		env,
 	},
 ]);
