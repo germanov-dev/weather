@@ -55,14 +55,7 @@ const AppWrapper = ({ children }) => {
 
 	const reverseGeocoding = async () => {
 		const reverseAPI = `https://api.opencagedata.com/geocode/v1/json?q=${lat}+${long}&key=d6d274c390434a5da83e82945466c21a`;
-		const response = await fetch(reverseAPI, {
-			method: 'GET',
-			headers: {
-				'Content-Type': 'application/json',
-				'Access-Control-Allow-Origin': 'https://germanov.js.org',
-				'API-Key': 'secret',
-			},
-		});
+		const response = await fetch(reverseAPI);
 
 		if (response.ok) {
 			const data = await response.json();
@@ -95,14 +88,7 @@ const AppWrapper = ({ children }) => {
 
 	const forwardGeocoding = async () => {
 		const forwardAPI = `https://api.opencagedata.com/geocode/v1/json?q=${query}&key=d6d274c390434a5da83e82945466c21a`;
-		const response = await fetch(forwardAPI, {
-			method: 'GET',
-			headers: {
-				'Content-Type': 'application/json',
-				'Access-Control-Allow-Origin': 'https://germanov.js.org',
-				'API-Key': 'secret',
-			},
-		});
+		const response = await fetch(forwardAPI);
 
 		if (response.ok) {
 			const data = await response.json();

@@ -25,14 +25,7 @@ const Weather = () => {
 
 	const getLocationData = async () => {
 		const weatherAPI = `https://api.darksky.net/forecast/d090ad71e840a71b480a0e2443977dab/${lat},${long}?units=${units}`;
-		const response = await fetch(weatherAPI, {
-			method: 'GET',
-			headers: {
-				'Content-Type': 'application/json',
-				'Access-Control-Allow-Origin': 'https://germanov.js.org',
-				'API-Key': 'secret',
-			},
-		});
+		const response = await fetch(weatherAPI);
 
 		if (response.ok) {
 			const data = await response.json();
