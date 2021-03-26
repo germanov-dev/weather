@@ -40,7 +40,11 @@ const DetailedWeather = () => {
 	const getDetailedWeather = async () => {
 		const res = await fetch(
 			`https://api.darksky.net/forecast/d090ad71e840a71b480a0e2443977dab/${lat},${long},${day}?units=${units}`,
-			{ mode: 'cors', credentials: 'include' }
+			{
+				headers: {
+					'Access-Control-Allow-Origin': 'https://germanov.js.org/weather',
+				},
+			}
 		);
 
 		if (res.ok) {
