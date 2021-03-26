@@ -28,7 +28,9 @@ const Weather = () => {
 		const response = await fetch(weatherAPI, {
 			method: 'GET',
 			headers: {
+				'Content-Type': 'application/json',
 				'Access-Control-Allow-Origin': 'https://germanov.js.org',
+				'API-Key': 'secret',
 			},
 		});
 

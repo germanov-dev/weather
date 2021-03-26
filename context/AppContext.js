@@ -58,7 +58,9 @@ const AppWrapper = ({ children }) => {
 		const response = await fetch(reverseAPI, {
 			method: 'GET',
 			headers: {
+				'Content-Type': 'application/json',
 				'Access-Control-Allow-Origin': 'https://germanov.js.org',
+				'API-Key': 'secret',
 			},
 		});
 
@@ -96,7 +98,9 @@ const AppWrapper = ({ children }) => {
 		const response = await fetch(forwardAPI, {
 			method: 'GET',
 			headers: {
+				'Content-Type': 'application/json',
 				'Access-Control-Allow-Origin': 'https://germanov.js.org',
+				'API-Key': 'secret',
 			},
 		});
 

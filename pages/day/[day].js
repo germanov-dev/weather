@@ -43,7 +43,9 @@ const DetailedWeather = () => {
 			{
 				method: 'GET',
 				headers: {
+					'Content-Type': 'application/json',
 					'Access-Control-Allow-Origin': 'https://germanov.js.org',
+					'API-Key': 'secret',
 				},
 			}
 		);
