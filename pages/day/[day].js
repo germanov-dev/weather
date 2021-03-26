@@ -41,8 +41,9 @@ const DetailedWeather = () => {
 		const res = await fetch(
 			`https://api.darksky.net/forecast/d090ad71e840a71b480a0e2443977dab/${lat},${long},${day}?units=${units}`,
 			{
+				method: 'GET',
 				headers: {
-					'Access-Control-Allow-Origin': '*',
+					'Access-Control-Allow-Origin': 'https://germanov.js.org',
 				},
 			}
 		);
