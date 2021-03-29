@@ -21,7 +21,6 @@ const DetailedWeather = () => {
 		weather,
 		setWeather,
 		setClassBackground,
-		proxy,
 	} = useContext(AppContext);
 	const [loading, setLoading] = useState(true);
 	const [hourIndex, setHourIndex] = useState(0);
@@ -39,8 +38,10 @@ const DetailedWeather = () => {
 	}, [day, units]);
 
 	const getDetailedWeather = async () => {
+		const API = 'd090ad71e840a71b480a0e2443977dab';
+
 		const res = await fetch(
-			`${proxy}https://api.darksky.net/forecast/d090ad71e840a71b480a0e2443977dab/${lat},${long},${day}?units=${units}`
+			`https://api.darksky.net/forecast/${API}/${lat},${long},${day}?units=${units}`
 		);
 
 		if (res.ok) {

@@ -237,7 +237,6 @@ const AppWrapper = ({ children }) => {
 				setClassBackground,
 				backgroundStyle,
 				setBackgroundStyle,
-				proxy,
 			}}>
 			{children}
 		</AppContext.Provider>
