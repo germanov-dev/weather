@@ -17,7 +17,9 @@ const Header = (props) => {
 	return (
 		<header className={styles.Header}>
 			<Link href='/'>
-				<a className={styles.Logo}>Logo</a>
+				<a className={styles.Logo}>
+					<Image src='/logo.png' width={200} height={200} />
+				</a>
 			</Link>
 
 			<Search
