@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Search from '../Search/Search';
 import Dropdown from '../Dropdown/Dropdown';
 import styles from '../../styles/Header.module.css';
+import Image from 'next/image';
 
 const Header = (props) => {
 	let dropdown =
