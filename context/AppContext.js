@@ -8,7 +8,9 @@ const AppWrapper = ({ children }) => {
 	const [lat, setLat] = useState(42.698334);
 	const [search, setSearch] = useState('');
 	const [query, setQuery] = useState('');
-	const [proxy, setProxy] = useState('https://cors-anywhere.herokuapp.com/');
+	const [proxyCall, setProxyCall] = useState(
+		'https://cors-anywhere.herokuapp.com/'
+	);
 	const [dropdownItems, setDropdownItems] = useState([]);
 	const [dropdownLoading, setDropdownLoading] = useState(false);
 	const [units, setUnits] = useState('si');
@@ -237,6 +239,7 @@ const AppWrapper = ({ children }) => {
 				setClassBackground,
 				backgroundStyle,
 				setBackgroundStyle,
+				proxyCall,
 			}}>
 			{children}
 		</AppContext.Provider>
