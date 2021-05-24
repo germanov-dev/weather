@@ -35,6 +35,8 @@ const AppWrapper = ({ children }) => {
 		navigator.geolocation.getCurrentPosition((position) => {
 			setLong(position.coords.longitude);
 			setLat(position.coords.latitude);
+
+			console.log(position);
 		});
 	};
 

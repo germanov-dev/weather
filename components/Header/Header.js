@@ -5,16 +5,7 @@ import styles from '../../styles/Header.module.css';
 import Image from 'next/image';
 
 const Header = (props) => {
-	let dropdown =
-		props.query != '' ? (
-			<Dropdown
-				dropdownItems={props.dropdownItems}
-				clicked={props.clicked}
-				dropdownLoading={props.dropdownLoading}
-			/>
-		) : (
-			''
-		);
+	let dropdown = props.query != '' ? <Dropdown clicked={props.clicked} /> : '';
 	return (
 		<header className={styles.Header}>
 			<Link href='/'>

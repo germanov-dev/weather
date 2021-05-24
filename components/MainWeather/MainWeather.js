@@ -113,7 +113,8 @@ const MainWeather = (props) => {
 						<span>Visibility</span>
 
 						<strong>
-							{Math.round(props.location.currently.visibility)} km
+							{Math.round(props.location.currently.visibility)}{' '}
+							{units == 'us' ? 'miles' : 'km'}
 						</strong>
 					</div>
 

@@ -6,12 +6,14 @@ import DropdownItem from './DropdownItem/DropdownItem';
 import Spinner from '../Spinner/Spinner';
 
 const Dropdown = (props) => {
-	const { setDropdownLoading } = useContext(AppContext);
+	const { dropdownItems, dropdownLoading } = useContext(AppContext);
 
-	const dropdownItems =
-		props.dropdownItems != 0 ? (
-			props.dropdownItems.map((item) => {
+	const dropdownLocations =
+		dropdownItems != 0 ? (
+			dropdownItems.map((item) => {
 				let type = item.components._type;
+
+				console.log(item);
 
 				if (type == 'city' || type == 'village' || type == 'town') {
 					if (
@@ -49,7 +51,7 @@ const Dropdown = (props) => {
 			<div>Not Found</div>
 		);
 
-	let dropdownContent = props.dropdownLoading ? <Spinner /> : dropdownItems;
+	let dropdownContent = dropdownLoading ? <Spinner /> : dropdownLocations;
 
 	return <div className={styles.Dropdown}>{dropdownContent}</div>;
 };
