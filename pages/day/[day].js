@@ -168,7 +168,7 @@ const DetailedWeather = () => {
 			<div className={styles.DetailedWeather}>
 				<div>
 					<button onClick={router.back} className={styles.Back}>
-						Back
+						<Image src='/back.svg' width={70} height={70} />
 					</button>
 
 					<div className={styles.Date}>

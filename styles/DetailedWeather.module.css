@@ -258,14 +258,15 @@
 	background: none;
 	border: none;
 	outline: none;
-	font-size: 0;
-	line-height: 0;
-	text-indent: -9999px;
-	background-image: url(/back.svg);
 	width: 3rem;
 	height: 3rem;
 	position: absolute;
 	top: 2rem;
 	left: 2rem;
 	cursor: pointer;
+}
+
+.Back img {
+	width: 100%;
+	height: auto;
 }
